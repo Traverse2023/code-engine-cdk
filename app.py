@@ -3,11 +3,11 @@ import os
 
 import aws_cdk as cdk
 
-from code_engine_cdk.code_engine_cdk_stack import CodeEngineCdkStack
+from submission_execution.submission_execution_stack import SubmissionExecutionStack
 
 
 app = cdk.App()
-CodeEngineCdkStack(app, "CodeEngineCdkStack",
+SubmissionExecutionStack(app, "CodeEngineCdkStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
