@@ -72,6 +72,7 @@ class SubmissionExecutionStack(Stack):
         )
 
         # Event bridge rule will forward only events with language=Python3 to python lambda
+        # TODO: Currently executes all as python based on aws account ID. Must change to read "language" field once more langs are added
         python_exec_rule = events.Rule(
             self, "PythonSubmissionRule",
             event_bus=submissions_bus,
